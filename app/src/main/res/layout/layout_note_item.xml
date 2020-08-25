@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="10dp"
+        android:background="@drawable/rounded_corner_drawable"
+        >
+
+        <com.google.android.material.textview.MaterialTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Buy Tickets to mouse on Saturday"
+                style="@style/MediumText"
+                android:textColor="@color/colorPrimary"
+                android:lines="2"
+                android:lineSpacingExtra="5dp"
+                />
+
+        <com.google.android.material.textview.MaterialTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Escalating into the shit storm called evacuative necessity, all citizens seem to agree to the fact that all politicians tend to shift towards a heavy rather rather than something late"
+                style="@style/RegularText"
+                android:textColor="@color/grey"
+                android:lineSpacingExtra="5dp"
+                android:maxLines="10"
+                android:layout_marginTop="5dp"
+                />
+
+    </LinearLayout>

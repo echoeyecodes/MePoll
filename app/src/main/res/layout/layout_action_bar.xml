@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        app:cardCornerRadius="5dp"
+        app:cardElevation="1dp"
+        app:contentPadding="10dp"
+        android:layout_margin="10dp"
+        >
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+        <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_menu_24px"
+                android:tint="@color/grey"
+                android:padding="5dp"
+                android:background="?attr/selectableItemBackground"
+                />
+
+        <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Search your notes"
+                style="@style/RegularText"
+                android:textColor="@color/grey"
+                android:layout_marginStart="10dp"
+                android:layout_weight="1"
+                />
+
+        <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_crop_7_5_24px"
+                android:tint="@color/grey"
+                android:padding="5dp"
+                android:background="?attr/selectableItemBackground"
+                />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_width="50dp"
+                android:layout_height="24dp"
+                android:src="@drawable/avatar"
+                android:layout_marginStart="10dp"
+                />
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

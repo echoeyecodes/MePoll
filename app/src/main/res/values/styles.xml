@@ -1,0 +1,79 @@
+<resources>
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryVariant">@color/colorPrimaryVariant</item>
+        <item name="colorOnPrimary">@color/colorOnPrimary</item>
+        <item name="colorSecondary">@color/colorSecondary</item>
+        <item name="colorSecondaryVariant">@color/colorSecondaryVariant</item>
+        <item name="colorOnSecondary">@color/colorOnSecondary</item>
+        <item name="colorOnBackground">@color/white</item>
+        <item name="colorOnSurface">@color/white</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="textAppearanceBody1">@style/BoldText</item>
+        
+        <item name="shapeAppearanceSmallComponent">@style/ShapeAppearanceSmall</item>
+        <item name="shapeAppearanceMediumComponent">@style/ShapeAppearanceMedium</item>
+        <item name="shapeAppearanceLargeComponent">@style/ShapeAppearanceLarge</item>
+
+
+    </style>
+
+
+
+<!--    The following is a list of Material components that support shape theming. Components that-->
+<!--    support shape theming have a shapeAppearance attribute-->
+<!--    a shapeAppearanceOverlay attribute, and are backed by a MaterialShapeDrawable.-->
+
+<!--    Bottom Sheet-->
+<!--    Card-->
+<!--    Chip-->
+<!--    Date Picker-->
+<!--    Dialog-->
+<!--    Extended Floating Action Button-->
+<!--    Floating Action Button-->
+<!--    Button-->
+<!--    Toggle Button-->
+<!--    Navigation View-->
+<!--    Slider-->
+<!--    Text Field-->
+
+
+
+    <style name="BoldText" parent="Widget.MaterialComponents.TextView">
+        <item name="android:fontFamily">@font/ubuntu_bold</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="RegularText" parent="Widget.MaterialComponents.TextView">
+        <item name="android:fontFamily">@font/ubuntu_regular</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="MediumText" parent="Widget.MaterialComponents.TextView">
+        <item name="android:fontFamily">@font/ubuntu_medium</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+    
+    
+    <style name="ShapeAppearanceSmall" parent="ShapeAppearance.MaterialComponents.SmallComponent">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerRadius">5dp</item>
+    </style>
+
+    <style name="ShapeAppearanceMedium" parent="ShapeAppearance.MaterialComponents.MediumComponent">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerRadius">5dp</item>
+    </style>
+
+    <style name="ShapeAppearanceLarge" parent="ShapeAppearance.MaterialComponents.LargeComponent">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerRadius">5dp</item>
+    </style>
+
+</resources>
