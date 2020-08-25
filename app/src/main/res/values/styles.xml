@@ -13,6 +13,7 @@
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
         <item name="textAppearanceBody1">@style/BoldText</item>
+        <item name="android:statusBarColor">@color/white</item>
         
         <item name="shapeAppearanceSmallComponent">@style/ShapeAppearanceSmall</item>
         <item name="shapeAppearanceMediumComponent">@style/ShapeAppearanceMedium</item>

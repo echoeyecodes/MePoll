@@ -6,7 +6,7 @@
         xmlns:app="http://schemas.android.com/apk/res-auto"
         app:cardCornerRadius="5dp"
         app:cardElevation="1dp"
-        app:contentPadding="10dp"
+        app:contentPadding="5dp"
         android:layout_margin="10dp"
         >
 
@@ -29,6 +29,10 @@
                 android:layout_height="wrap_content"
                 android:text="Search your notes"
                 style="@style/RegularText"
+                android:clickable="true"
+                android:focusable="true"
+                android:background="?attr/selectableItemBackground"
+                android:padding="5dp"
                 android:textColor="@color/grey"
                 android:layout_marginStart="10dp"
                 android:layout_weight="1"
@@ -44,7 +48,7 @@
                 />
 
         <de.hdodenhof.circleimageview.CircleImageView
-                android:layout_width="50dp"
+                android:layout_width="24dp"
                 android:layout_height="24dp"
                 android:src="@drawable/avatar"
                 android:layout_marginStart="10dp"
