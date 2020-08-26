@@ -5,11 +5,14 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
+        android:clickable="true"
+        android:focusable="true"
         android:padding="10dp"
         android:background="@drawable/rounded_corner_drawable"
         >
 
         <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/note_title_item"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Buy Tickets to mouse on Saturday"
@@ -20,9 +23,10 @@
                 />
 
         <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/note_content_item"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Escalating into the shit storm called evacuative necessity, all citizens seem to agree to the fact that all politicians tend to shift towards a heavy rather rather than something late"
+                android:text="@string/note_content"
                 style="@style/RegularText"
                 android:textColor="@color/grey"
                 android:lineSpacingExtra="5dp"

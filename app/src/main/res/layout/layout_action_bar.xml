@@ -19,9 +19,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:src="@drawable/ic_menu_24px"
-                android:tint="@color/grey"
+                app:tint="@color/grey"
                 android:padding="5dp"
-                android:background="?attr/selectableItemBackground"
+                android:background="?attr/selectableItemBackgroundBorderless"
                 />
 
         <TextView
@@ -42,9 +42,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:src="@drawable/ic_crop_7_5_24px"
-                android:tint="@color/grey"
+                app:tint="@color/grey"
                 android:padding="5dp"
-                android:background="?attr/selectableItemBackground"
+                android:background="?attr/selectableItemBackgroundBorderless"
                 />
 
         <de.hdodenhof.circleimageview.CircleImageView

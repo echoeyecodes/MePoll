@@ -6,7 +6,7 @@
 
     <include android:id="@+id/now_action_bar" layout="@layout/layout_action_bar" />
     <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/fragment_home_recycler_view"
+            android:id="@+id/fragment_now_recycler_view"
             android:layout_below="@id/now_action_bar"
             android:layout_width="match_parent"
             android:layout_height="match_parent" />
