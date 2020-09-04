@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        android:orientation="vertical"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/poll_options_recycler_view"
+            android:layout_width="match_parent"
+            android:overScrollMode="never"
+            android:layout_height="wrap_content" />
+
+
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/RegularText"
+            android:text="+3 options"
+            android:layout_gravity="end"
+            android:textColor="@color/grey"
+            android:layout_marginBottom="10dp"
+            />
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+        <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/mutual_voters_recycler_view"
+                />
+
+        <TextView
+                android:id="@+id/mutual_voters_recycler_view_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/RegularText"
+                android:layout_gravity="center_vertical"
+                android:text="participated in this poll"
+                android:textColor="@color/grey"
+                />
+    </LinearLayout>
+
+</LinearLayout>

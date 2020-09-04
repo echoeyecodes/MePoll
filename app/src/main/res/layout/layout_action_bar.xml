@@ -7,7 +7,8 @@
         app:cardCornerRadius="5dp"
         app:cardElevation="1dp"
         app:contentPadding="5dp"
-        android:layout_margin="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginHorizontal="15dp"
         >
 
     <LinearLayout
@@ -27,7 +28,7 @@
         <TextView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:text="Search your notes"
+                android:text="Search for topics, tags, etc"
                 style="@style/RegularText"
                 android:clickable="true"
                 android:focusable="true"
@@ -36,15 +37,6 @@
                 android:textColor="@color/grey"
                 android:layout_marginStart="10dp"
                 android:layout_weight="1"
-                />
-
-        <ImageButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/ic_crop_7_5_24px"
-                app:tint="@color/grey"
-                android:padding="5dp"
-                android:background="?attr/selectableItemBackgroundBorderless"
                 />
 
         <de.hdodenhof.circleimageview.CircleImageView

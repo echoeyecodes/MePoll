@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content">
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/avatar"
+                />
+
+        <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginStart="10dp"
+                android:layout_weight="1"
+                >
+           <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="Samantha Smith"
+                   style="@style/MediumText" />
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="6 hours left"
+                    style="@style/RegularText"
+                    android:textColor="@color/grey"
+                    />
+        </LinearLayout>
+
+        <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_baseline_more_horiz_24"
+                android:padding="10dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:tint="@color/grey"
+                />
+    </LinearLayout>
+
+    <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/RegularText"
+            android:text="You are not alone in that annoyance lol. Everyone seems to think Apex legends is the best game out there. Byt reality is that it really is the best game out there motherfuckers!"
+            android:layout_marginVertical="10dp"
+            android:lineSpacingExtra="4dp"
+            android:textSize="16sp"
+            />
+
+    <include layout="@layout/layout_poll_options_recycler_view" />
+
+</LinearLayout>
