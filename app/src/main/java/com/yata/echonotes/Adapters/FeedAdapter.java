@@ -4,12 +4,15 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.*;
+import com.yata.echonotes.BottomSheets.ProfileListDialogFragment;
 import com.yata.echonotes.Factory.AdapterFactory.FeedPollAdapterFactory;
 import com.yata.echonotes.Factory.AdapterFactory.FeedPollMutualVoterAdapterFactory;
 import com.yata.echonotes.Factory.AdapterFactoryGenerator;
+import com.yata.echonotes.Interfaces.MutualsContainerClicked;
 import com.yata.echonotes.ItemDecorations.ColumnItemDecoration;
 import com.yata.echonotes.Models.NewsModel;
 import com.yata.echonotes.R;
@@ -21,11 +24,13 @@ import java.util.List;
 public class FeedAdapter extends ListAdapter<NewsModel, FeedAdapter.FeedViewHolder> {
     private List<NewsModel> newsModels;
     private Context context;
+    private MutualsContainerClicked mutualsContainerClicked;
 
-    public FeedAdapter(@NonNull @NotNull DiffUtil.ItemCallback<NewsModel> diffCallback, List<NewsModel> newsModels, Context context) {
+    public FeedAdapter(@NonNull @NotNull DiffUtil.ItemCallback<NewsModel> diffCallback, List<NewsModel> newsModels, Context context, MutualsContainerClicked mutualsContainerClicked) {
         super(diffCallback);
         this.newsModels = newsModels;
         this.context = context;
+        this.mutualsContainerClicked = mutualsContainerClicked;
     }
 
     @NonNull
@@ -66,12 +71,18 @@ public class FeedAdapter extends ListAdapter<NewsModel, FeedAdapter.FeedViewHold
         }
 
         holder.recyclerView.setAdapter(adapter);
+
+        holder.mutual_voters_container.setOnClickListener(v ->{
+            mutualsContainerClicked.onMutualsContainerClicked();
+        });
+
     }
 
     protected static class FeedViewHolder extends RecyclerView.ViewHolder{
         private final RecyclerView recyclerView;
         private final RecyclerView mutuals_recycler_view;
         private final TextView mutuals_recycler_view_text;
+        private final LinearLayout mutual_voters_container;
 
         public FeedViewHolder(@NonNull @NotNull View itemView) {
             super(itemView);
@@ -79,6 +90,7 @@ public class FeedAdapter extends ListAdapter<NewsModel, FeedAdapter.FeedViewHold
             recyclerView = itemView.findViewById(R.id.poll_options_recycler_view);
             mutuals_recycler_view = itemView.findViewById(R.id.mutual_voters_recycler_view);
             mutuals_recycler_view_text = itemView.findViewById(R.id.mutual_voters_recycler_view_text);
+            mutual_voters_container = itemView.findViewById(R.id.mutual_voters_container);
         }
     }
 

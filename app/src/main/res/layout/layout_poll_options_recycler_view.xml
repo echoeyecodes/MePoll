@@ -23,8 +23,10 @@
             />
 
     <LinearLayout
+            android:id="@+id/mutual_voters_container"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:elevation="1dp"
             android:orientation="horizontal">
 
         <androidx.recyclerview.widget.RecyclerView

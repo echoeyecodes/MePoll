@@ -4,13 +4,14 @@ import android.content.Context;
 import androidx.recyclerview.widget.DiffUtil;
 import com.yata.echonotes.Adapters.*;
 import com.yata.echonotes.Factory.AdapterAbstractFactory;
+import com.yata.echonotes.Interfaces.MutualsContainerClicked;
 import com.yata.echonotes.Models.NewsModel;
 
 import java.util.List;
 
 public class AddOptionsAdapterFactory extends AdapterAbstractFactory {
     @Override
-    public FeedAdapter feedAdapter(DiffUtil.ItemCallback<NewsModel> itemCallback, List<NewsModel> newsModels, Context context) {
+    public FeedAdapter feedAdapter(DiffUtil.ItemCallback<NewsModel> itemCallback, List<NewsModel> newsModels, Context context, MutualsContainerClicked mutualsContainerClicked) {
         return null;
     }
 
@@ -32,5 +33,10 @@ public class AddOptionsAdapterFactory extends AdapterAbstractFactory {
     @Override
     public AddOptionsAdapter addOptionsAdapter(Context context, String[] options) {
         return new AddOptionsAdapter(context, options);
+    }
+
+    @Override
+    public ProfileListBottomSheetAdapter profileListBottomSheetAdapter(DiffUtil.ItemCallback<String> itemCallback, List<String> urls) {
+        return null;
     }
 }

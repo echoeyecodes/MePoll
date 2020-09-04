@@ -9,7 +9,7 @@ import com.yata.echonotes.Models.NewsModel;
 
 import java.util.List;
 
-public class FeedPollAdapterFactory extends AdapterAbstractFactory {
+public class ProfileListBottomSheetAdapterFactory extends AdapterAbstractFactory {
     @Override
     public FeedAdapter feedAdapter(DiffUtil.ItemCallback<NewsModel> itemCallback, List<NewsModel> newsModels, Context context, MutualsContainerClicked mutualsContainerClicked) {
         return null;
@@ -17,7 +17,7 @@ public class FeedPollAdapterFactory extends AdapterAbstractFactory {
 
     @Override
     public FeedPollOptionsAdapter feedMediaAdapter(DiffUtil.ItemCallback<NewsModel> itemCallback, List<String> options) {
-        return new FeedPollOptionsAdapter(itemCallback, options);
+        return null;
     }
 
     @Override
@@ -36,7 +36,7 @@ public class FeedPollAdapterFactory extends AdapterAbstractFactory {
     }
 
     @Override
-    public ProfileListBottomSheetAdapter profileListBottomSheetAdapter(DiffUtil.ItemCallback<String> itemCallback, List<String> urls) {
-        return null;
+    public ProfileListBottomSheetAdapter profileListBottomSheetAdapter(DiffUtil.ItemCallback<String> itemCallback, List<String> users) {
+        return new ProfileListBottomSheetAdapter(itemCallback, users);
     }
 }

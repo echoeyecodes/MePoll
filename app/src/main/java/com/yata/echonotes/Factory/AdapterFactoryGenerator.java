@@ -16,6 +16,8 @@ public class AdapterFactoryGenerator {
                 return new ProfileItemAdapterFactory();
             case ADD_OPTIONS:
                 return new AddOptionsAdapterFactory();
+            case PROFILE_LIST:
+                return new ProfileListBottomSheetAdapterFactory();
             default:
                 return null;
         }
@@ -27,5 +29,6 @@ public class AdapterFactoryGenerator {
         POLL_MUTUAL,
         PROFILE_ITEMS,
         ADD_OPTIONS,
+        PROFILE_LIST,
     }
 }

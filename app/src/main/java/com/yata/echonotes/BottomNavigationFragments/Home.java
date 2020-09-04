@@ -13,8 +13,10 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.yata.echonotes.Adapters.FeedAdapter;
+import com.yata.echonotes.BottomSheets.ProfileListDialogFragment;
 import com.yata.echonotes.Factory.AdapterFactory.FeedAdapterFactory;
 import com.yata.echonotes.Factory.AdapterFactoryGenerator;
+import com.yata.echonotes.Interfaces.MutualsContainerClicked;
 import com.yata.echonotes.ItemDecorations.ColumnItemDecoration;
 import com.yata.echonotes.Models.NewsModel;
 import com.yata.echonotes.R;
@@ -25,7 +27,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-public class Home extends Fragment {
+public class Home extends Fragment implements MutualsContainerClicked {
     private FloatingActionButton floatingActionButton;
 
     public Home(){
@@ -70,12 +72,17 @@ private RecyclerView recyclerView;
         NewsModel newsModel1 = new NewsModel("1", "", "", "", options2, new ArrayList<>());
         NewsModel newsModel2 = new NewsModel("111", "", "", "", options3, options1);
         assert feedAdapterFactory != null;
-        FeedAdapter feedAdapter = feedAdapterFactory.feedAdapter(customDiffItemUtilCallback, Arrays.asList(newsModel, newsModel1, newsModel2), getContext());
+        FeedAdapter feedAdapter = feedAdapterFactory.feedAdapter(customDiffItemUtilCallback, Arrays.asList(newsModel, newsModel1, newsModel2), getContext(), this);
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext(), LinearLayoutManager.VERTICAL, false));
         recyclerView.addItemDecoration(new ColumnItemDecoration(IntToDpConverter.intToDp(15)));
         recyclerView.setAdapter(feedAdapter);
         floatingActionButton.setOnClickListener(v -> Navigation.findNavController(v).navigate(R.id.fragment_add_post));
 
+    }
+
+    @Override
+    public void onMutualsContainerClicked() {
+        ProfileListDialogFragment.newInstance().show(getChildFragmentManager(), "PROFILE_LIST_BOTTOM_FRAGMENT");
     }
 
     private static class CustomDiffItemUtilCallback extends DiffUtil.ItemCallback<NewsModel>{
