@@ -7,11 +7,19 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+import com.yata.echonotes.Adapters.AddOptionsAdapter;
+import com.yata.echonotes.Factory.AdapterFactory.AddOptionsAdapterFactory;
+import com.yata.echonotes.Factory.AdapterFactoryGenerator;
+import com.yata.echonotes.ItemDecorations.ColumnItemDecoration;
 import com.yata.echonotes.R;
+import com.yata.echonotes.utils.IntToDpConverter;
 import org.jetbrains.annotations.NotNull;
 
 public class AddPostFragment extends Fragment {
 
+    private RecyclerView recyclerView;
     public AddPostFragment(){
 
     }
@@ -28,6 +36,16 @@ public class AddPostFragment extends Fragment {
     public void onViewCreated(@NonNull @NotNull View view, @Nullable @org.jetbrains.annotations.Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
+        recyclerView = view.findViewById(R.id.add_options_input_recycler_view);
+        recyclerView.setLayoutManager(new LinearLayoutManager(getContext(), LinearLayoutManager.VERTICAL, false));
+
+        AddOptionsAdapterFactory addOptionsAdapterFactory = (AddOptionsAdapterFactory) AdapterFactoryGenerator.getAdapterFactory(AdapterFactoryGenerator.ADAPTER_TYPES.ADD_OPTIONS);
+        assert addOptionsAdapterFactory != null;
+        String[] options = {"", ""};
+        AddOptionsAdapter addOptionsAdapter = addOptionsAdapterFactory.addOptionsAdapter(getContext(), options);
+        recyclerView.addItemDecoration(new ColumnItemDecoration(IntToDpConverter.intToDp(10)));
+        recyclerView.setAdapter(addOptionsAdapter);
+        addOptionsAdapter.notifyDataSetChanged();
     }
 
 }

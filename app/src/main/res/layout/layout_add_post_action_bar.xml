@@ -15,7 +15,7 @@
             android:layout_height="wrap_content"
             android:src="@drawable/ic_baseline_close_24"
             android:background="?attr/selectableItemBackgroundBorderless"
-            android:padding="10dp"
+            android:padding="5dp"
             android:tint="@color/colorPrimary"
             />
 
@@ -28,7 +28,6 @@
     <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:padding="10dp"
             android:text="POST"
             style="@style/Widget.AppCompat.Button.Borderless"
             android:textColor="@color/colorPrimary"

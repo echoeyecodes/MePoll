@@ -1,9 +1,6 @@
 package com.yata.echonotes.Factory;
 
-import com.yata.echonotes.Factory.AdapterFactory.FeedAdapterFactory;
-import com.yata.echonotes.Factory.AdapterFactory.FeedPollAdapterFactory;
-import com.yata.echonotes.Factory.AdapterFactory.FeedPollMutualVoterAdapterFactory;
-import com.yata.echonotes.Factory.AdapterFactory.ProfileItemAdapterFactory;
+import com.yata.echonotes.Factory.AdapterFactory.*;
 
 public class AdapterFactoryGenerator {
 
@@ -17,6 +14,8 @@ public class AdapterFactoryGenerator {
                 return new FeedPollMutualVoterAdapterFactory();
             case PROFILE_ITEMS:
                 return new ProfileItemAdapterFactory();
+            case ADD_OPTIONS:
+                return new AddOptionsAdapterFactory();
             default:
                 return null;
         }
@@ -26,6 +25,7 @@ public class AdapterFactoryGenerator {
         FEED,
         FEED_POLL,
         POLL_MUTUAL,
-        PROFILE_ITEMS
+        PROFILE_ITEMS,
+        ADD_OPTIONS,
     }
 }

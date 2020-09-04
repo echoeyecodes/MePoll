@@ -2,10 +2,7 @@ package com.yata.echonotes.Factory.AdapterFactory;
 
 import android.content.Context;
 import androidx.recyclerview.widget.DiffUtil;
-import com.yata.echonotes.Adapters.FeedAdapter;
-import com.yata.echonotes.Adapters.FeedPollMutualVoterAdapter;
-import com.yata.echonotes.Adapters.FeedPollOptionsAdapter;
-import com.yata.echonotes.Adapters.ProfileItemsAdapter;
+import com.yata.echonotes.Adapters.*;
 import com.yata.echonotes.Factory.AdapterAbstractFactory;
 import com.yata.echonotes.Models.NewsModel;
 
@@ -30,5 +27,10 @@ public class ProfileItemAdapterFactory extends AdapterAbstractFactory {
     @Override
     public ProfileItemsAdapter profileItemsAdapter(Context context) {
         return new ProfileItemsAdapter(context);
+    }
+
+    @Override
+    public AddOptionsAdapter addOptionsAdapter(Context context, String[] options) {
+        return null;
     }
 }

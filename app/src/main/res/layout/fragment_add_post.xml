@@ -12,15 +12,7 @@
         <include layout="@layout/layout_add_post_action_bar"/>
 
         <include layout="@layout/layout_add_post_text_area"/>
+        <include layout="@layout/layout_add_options" />
     </LinearLayout>
-
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="bottom|end"
-            android:layout_margin="16dp"
-            android:src="@drawable/ic_baseline_photo_library_24"
-            android:elevation="1dp"
-            />
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
